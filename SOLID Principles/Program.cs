@@ -1,4 +1,5 @@
-﻿using OpenClosedPrinciple;
+﻿using LiskovSubstitutionPrinciple;
+using OpenClosedPrinciple;
 using SingleResponsibilityPrinciple.LoginHandler;
 using System;
 
@@ -26,6 +27,12 @@ namespace SOLID_Principles
             AreaCalculator areaCalculator = new AreaCalculator();
             areaCalculator.CalculateTotalArea(rectangle);
             areaCalculator.CalculateTotalArea(circle);
+            Console.WriteLine("=============================================" + Environment.NewLine);
+            Console.WriteLine("Liskov Substitution Principle" + Environment.NewLine);
+            BMW _bmw = new BMW();
+            VolksWagen _volkswagen = new VolksWagen();
+            _bmw.GetColor();
+            _volkswagen.GetColor();
             Console.ReadLine();
         }
     }
